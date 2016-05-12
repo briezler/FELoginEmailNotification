@@ -1,5 +1,5 @@
 <?php
-​
+
 \TYPO3\CMS\Extbase\Utility\ExtensionUtility::registerPlugin(
     'CNETInc' . $_EXTKEY,  #vendorname (choosen by u) and ExtensionKey variable
     'FELoginEmainNotification', #extension name (directory name of your ext)

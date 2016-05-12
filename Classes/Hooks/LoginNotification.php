@@ -24,7 +24,25 @@ namespace CNETInc\feloginemailnotification\Hooks
      * the redirect takes effect
      */
     public function sendNotification() {
-        mail(); // for testing purposes
+        //Make instance of mail
+		$mail = \TYPO3\CMS\Core\Utility\GeneralUtility::makeInstance('TYPO3\\CMS\\Core\\Mail\\MailMessage');
+		//prepare to send the message
+		$mail	
+		//Give a subject
+		 ->setSubject('FE User login notification')
+
+		// Set the From address with an associative array
+		->setFrom(array('Portal@cnetokc.com' => 'CNET Inc Portal'))
+
+		// Set the To addresses with an associative array
+		->setTo(array('cameron.llewellyn@cnetokc.com', 'other@domain.org' => 'A name'))
+
+		// Give it a body
+		->setBody('A user has logged into the DEV portal username is ' this->user)
+
+		// And finally do send it
+		->send()
+		;// for testing purposes
     }
 	
 }

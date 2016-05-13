@@ -38,7 +38,7 @@ namespace CNETInc\feloginemailnotification\Hooks
 		->setTo(array('cameron.llewellyn@cnetokc.com', 'other@domain.org' => 'A name'))
 
 		// Give it a body
-		->setBody('A user has logged into the DEV portal username is ' this->user)
+		->setBody('A user has logged into the DEV portal username is ' $this->user['username'])
 
 		// And finally do send it
 		->send()
